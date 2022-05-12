@@ -2,8 +2,8 @@
 
 const ClientSchema = new mongoose.Schema({
     Id:String,
+    password:String,
     dateOfBirth:Date,
-    status:Boolean,
     num_of_credit:String,
     cvv:String,
     validity:Date,
