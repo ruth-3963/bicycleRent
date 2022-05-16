@@ -13,7 +13,7 @@ const addClient = async (req, res) => {
 
 const getClientByPassowrd = async (req, res) => {
     try {
-        let a = await Client.find((c) => { c.passowrd == req.passowrd && c.email==req.email });
+        let a = await Client.findOne(0);
         if(a === null)
             return res.send("משתמש לא קיים")
         return res.send(a);
@@ -24,5 +24,5 @@ const getClientByPassowrd = async (req, res) => {
 }
 
 module.exports = {
-    addClient, getClientByPassowrd,get
+    addClient, getClientByPassowrd
 }
