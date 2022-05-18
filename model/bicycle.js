@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
 const BicycleSchema = new mongoose.Schema({
-    Id: String,
     place: String,
     status: Boolean
 })

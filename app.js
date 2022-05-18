@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 //יבוא כל העמודים
 const ClientRout = require("./routing/client");
 const BicycleRout = require("./routing/bicycle");
-const RentingRout = require("./routing/client");
+const RentingRout = require("./routing/renting");
 
 const app = express();
 

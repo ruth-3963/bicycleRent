@@ -1,4 +1,4 @@
-const Rent = require("../model/renting").Rent;
+const Rent = require("../model/renting").Renting;
 
 const addRenting = async (req, res) => {
     try {
@@ -13,7 +13,8 @@ const addRenting = async (req, res) => {
 
 const getAllBicycleRenting = async (req, res) => {
     try {
-        let a = await Client.find();
+        let a = await Rent.find({});
+    console.log(a)
         return res.send(a)
     }
     catch (e) {
