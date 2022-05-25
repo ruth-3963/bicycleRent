@@ -12,7 +12,6 @@ const addClient = async (req, res) => {
 }
 
 const getClientByPassowrd = async (req, res) => {
-    console.log(req.params)
     try {
         let a = await Client.find({password: req.params.password, email:req.params.email});
         // let a = await Client.find((c)=>{c.password == req.params.password && c.email ==req.params.email});

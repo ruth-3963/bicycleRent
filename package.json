@@ -1,0 +1,24 @@
+{
+  "name": "bicyclerent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruth-3963/bicycleRent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruth-3963/bicycleRent/issues"
+  },
+  "homepage": "https://github.com/ruth-3963/bicycleRent#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4"
+  }
+}

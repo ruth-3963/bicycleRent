@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require('cors');
 //יבוא כל העמודים
 const ClientRout = require("./routing/client");
 const BicycleRout = require("./routing/bicycle");
@@ -12,7 +13,7 @@ mongoose.connect("mongodb://localhost:27017/bicycleRent")
     .catch(err =>
         console.log(err)
     )
-
+app.use(cors());
 app.use(express.json())
 app.use("/client", ClientRout)
 app.use("/bicycle", BicycleRout)
