@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 const BicycleSchema = new mongoose.Schema({
-    place: String,
+    lng:Number,
+    lat:Number,
     status: Boolean
 })
 const Bicycle = mongoose.model("bicycle", BicycleSchema);

@@ -26,7 +26,7 @@ const updateBicycleStatus = async (req, res) => {
     try {
         // let b = await Bicycle.find((b) => { b.id == req.id });
         // b.status=!b.status;
-        let b1= await Bicycle.findByIdAndUpdate(req.body._id,req.body)
+        let b1 = await Bicycle.findByIdAndUpdate(req.body._id, req.body)
         await b1.save();
         return res.status(200).send(b1);
     }
@@ -35,8 +35,8 @@ const updateBicycleStatus = async (req, res) => {
     }
 }
 const updateBicyclePlace = async (req, res) => {
-    try {       
-        let b1= await Bicycle.findByIdAndUpdate(req.body._id,req.body)
+    try {
+        let b1 = await Bicycle.findByIdAndUpdate(req.body._id, req.body)
         await b1.save();
         return res.status(200).send(b1);
     }
@@ -62,8 +62,7 @@ const getAllBicycle = async (req, res) => {
         return res.status(400).send(e);
     }
 }
-
 module.exports = {
-    getAllBicycle, getBicycleById,updateBicycleStatus,
-    updateBicyclePlace,addBicycle,removeBicycle
+    getBicycleById, updateBicycleStatus,
+    updateBicyclePlace, addBicycle, removeBicycle, getAllBicycle
 }

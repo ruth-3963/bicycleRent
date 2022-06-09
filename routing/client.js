@@ -5,3 +5,4 @@ router.get("/", clientController.getClientByPassowrd);
 router.post("/register", clientController.addClient);
 
 module.exports = router;
+

@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const RentingSchema = new mongoose.Schema({
     client_Id: { type: mongoose.Types.ObjectId, ref: "client" },
     bicycle_Id: { type: mongoose.Types.ObjectId, ref: "bicycle" },
-    date_rent: Date,
     start_time: Date,
     end_time: Date,
     source_place: String
