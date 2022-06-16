@@ -6,6 +6,6 @@ router.get("/", bicycleController.getAllBicycle);
 router.post("/addBicycle", bicycleController.addBicycle);
 router.delete("/removeBicycle", bicycleController.removeBicycle);
 router.put("/updateBicyclePlace", bicycleController.updateBicyclePlace);
-router.put("/updateBicycleStatus", bicycleController.updateBicycleStatus);
+router.put("/updateBicycleStatus/:id", bicycleController.updateBicycleStatus);
 
 module.exports = router;

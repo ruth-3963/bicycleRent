@@ -26,7 +26,7 @@ const updateBicycleStatus = async (req, res) => {
     try {
         // let b = await Bicycle.find((b) => { b.id == req.id });
         // b.status=!b.status;
-        let b1 = await Bicycle.findByIdAndUpdate(req.body._id, req.body)
+        let b1 = await Bicycle.findByIdAndUpdate(req.params.id, {status:true})
         await b1.save();
         return res.status(200).send(b1);
     }
@@ -54,8 +54,10 @@ const getBicycleById = async (req, res) => {
     }
 }
 const getAllBicycle = async (req, res) => {
+    
     try {
         let a = await Bicycle.find({});
+        console.log(a)
         return res.send(a);
     }
     catch (e) {
